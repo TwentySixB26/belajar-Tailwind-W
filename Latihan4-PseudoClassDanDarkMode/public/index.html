@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font css  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playwrite+PE:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    
+    
+
+</head>
+<body class="font-inter dark:bg-slate-900  dark:text-slate-200 transition duration-300 ease-linear ">
+
+    <!-- hover, active dan focus  -->
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Hover,active dan focus</h1>
+        <form>
+            <button class="bg-sky-500 hover:bg-pink-600 active:bg-red-800  rounded-full px-6 py-2 mx-auto block text-white font-semibold text-center text-base">
+                ini mengunakan active dan hover
+            </button>
+            <input type="text" name="" id="" class="block m-auto mt-10   rounded-md px-2 py-1 text-sm placeholder:text-sm  placeholder-slate-400 focus:outline-green-500 ring-1  ring-slate-900" placeholder="ini mengunakan focus">
+        </form>
+    </div>
+    <!-- akhir hover,active dan focus  -->
+
+    <hr class="border-b-1 border-red-950 mt-10">
+
+    <!-- disable,valid, invalid  -->
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Valid, invalid , disable</h1>
+        <form>
+            <label class="block m-auto">
+                <span class="block m-auto text-center">Masukan email:</span>
+                <input type="email" name="" id="" class="block m-auto  border-2 rounded-md px-2 py-1 text-sm placeholder:text-sm  placeholder-slate-400 focus:outline-green-500 border-slate-500 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:outline-pink-500 focus:valid:text-green-600 " placeholder="ini valid dan invalid"> 
+            </label>
+            <input type="text" placeholder="ini disable" class="block m-auto mt-5  border-2 rounded-md px-2 py-1 text-sm placeholder:text-sm  placeholder-slate-400 disabled:bg-slate-300 disabled:text-red-800 disabled:border-red-600 disabled:shadow-none" disabled>
+            <!-- ... -->
+        </form>
+        
+    </div>
+    <!--akhir disable,valid, invalid  -->
+
+    <hr class="border-b-1 border-red-950 mt-10">
+
+    <!-- group  -->
+    <div class="m-auto w-1/2 border border-slate-300 shadow-md mt-20 px-8 py-7 rounded-xl hover:bg-sky-600 group cursor-pointer ">
+        <h1 class="font-bold text-slate-700 text-xl mb-5 group-hover:text-white selection:bg-yellow-200 selection:text-slate-900">Ini Styling based on parent state(grup) dan selection </h1>
+        <p class="text-sm text-justify text-slate-600 group-hover:text-white selection:bg-yellow-200 selection:text-slate-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quia maiores rerum mollitia itaque molestias repellendus inventore laudantium explicabo, quis at harum omnis labore consequuntur delectus ipsam officia id minus nobis autem repellat iusto minima vitae doloribus. Nihil minus error, modi suscipit adipisci architecto, ipsa vel voluptatibus sint magni corrupti!</p>
+    </div>
+    <!-- akhir group  -->
+
+    <hr class="border-b-1 border-red-950 mt-10">
+    <!-- peer  -->
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Styling based on sibling state (peer) </h1>
+        <form>
+            <label class="block" for="input">
+                <span class="block text-sm font-medium text-slate-700 text-center">Email</span>
+            </label>
+            <input type="email" name="" id="input" class="block m-auto  border-2 rounded-md px-2 py-1 text-sm placeholder:text-sm  placeholder-slate-400 focus:outline-green-500 border-slate-500 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:outline-pink-500 focus:valid:text-green-600 peer" placeholder="ini adalah peer" > 
+            <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm text-center">
+                Please provide a valid email address.
+            </p>
+        </form>
+    </div>
+    <!-- akhir peer  -->
+
+    <hr class="border-b-1 border-red-950 mt-10">
+    <!-- styling direct children  -->
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Styling children(*) </h1>
+        <h2>Jurusan<h2>
+            <ul class="*:rounded-full *:border *:border-sky-100 *:bg-sky-500 *:text-white *:px-7 *:py-0.5 dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 flex *:mr-4">
+                <li>Teknik informatika</li>
+                <li>Teknik mesin</li>
+                <li>Teknik elektro</li>
+                <li>Teknik sipil</li>
+                <li>Teknik kimia</li>
+            <!-- ... -->
+            </ul>          
+    </div>
+    <!-- akhir styling direct children  -->
+
+    <hr class="border-b-1 border-red-950 mt-10">
+    <!-- Styling based on descendants (has) -->
+    <div class="">
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">  Styling based on descendants (has) </h1>
+        <ul class="">
+            <label for="ayam" class="*:m-auto  *:my-9 *:px-5 *:py-2 *:rounded-full *:text-center hover:border hover:bg-sky-400 *:flex *:justify-between "> 
+                <li class="w-1/6 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200 has-[:checked]:border-indigo-500 has-[:checked]:border">
+                    <span>Ayam</span>
+                    <input type="radio" name="hewan" id="ayam" class="checked:border-indigo-500">
+                </li>
+            </label>
+            <label for="ikan" class="*:m-auto  *:my-9 *:px-5 *:py-2 *:rounded-full *:text-center hover:border *:flex *:justify-between "> 
+                <li class="w-1/6 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200 has-[:checked]:border-indigo-500 has-[:checked]:border">
+                    <span>Ikan</span>
+                    <input type="radio" name="hewan" id="ikan" class="checked:border-indigo-500">
+                </li>
+            </label>
+            <label for="kuda" class="*:m-auto  *:my-9 *:px-5 *:py-2 *:rounded-full *:text-center hover:border *:flex *:justify-between "> 
+                <li class="w-1/6 has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200 has-[:checked]:border-indigo-500 has-[:checked]:border">
+                    <span>Kuda</span>
+                    <input type="radio" name="hewan" id="kuda">
+                </li>
+            </label>
+            
+        </ul>   
+    </div>
+    <!--Akhir Styling based on descendants (has) -->
+
+    <!-- before after  -->
+    <hr class="border-b-1 border-red-950 mt-10">
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">  Before after (after: dan before:)</h1>
+        <label class="block">
+            <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700 text-center">
+                Email
+            </span>
+            <input type="email" name="" id="" class="block m-auto  border-2 rounded-md px-2 py-1 text-sm placeholder:text-sm  placeholder-slate-400 focus:outline-green-500 border-slate-500 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:outline-pink-500 focus:valid:text-green-600 " placeholder="ini after"> 
+        </label>
+
+        <blockquote class="text-2xl font-semibold italic text-center text-slate-900 mt-10">
+            When you look
+            <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative  inline-block"> 
+                <span class="relative text-white">annoyed</span>
+            </span>
+            all the time, people think that you're busy.
+        </blockquote>
+    </div>
+    <!--akhir before after  -->
+
+    <hr class="border-b-1 border-red-950 mt-10">
+    <!-- File input buttons -->
+    <div class="block mx-auto ">
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter"> File input buttons(file:) </h1>
+        <form class="flex items-center justify-center space-x-6 ">
+            <div class="shrink-0 ">
+                <img class="h-16 w-16 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
+            </div>
+            <label class="block ">
+                <span class="sr-only">Choose profile photo</span>
+                <input type="file" class="block w-full text-sm text-slate-500
+                file:mr-4 file:py-2 file:px-4
+                file:rounded-full file:border-0
+                file:text-sm file:font-semibold
+                file:bg-violet-50 file:text-violet-700
+                hover:file:bg-violet-100"/>
+            </label>
+        </form>
+    </div>
+    <!-- akhir File input buttons -->
+
+
+    <!-- List markers -->
+    <hr class="border-b-1 border-red-950 mt-10">
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter"> List markers(marker:)  </h1>
+        <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-500">
+            <li>5 cups chopped Porcini mushrooms</li>
+            <li>1/2 cup of olive oil</li>
+            <li>3lb of celery</li>
+        </ul>
+    </div>
+    <!-- akhir List markers -->
+
+
+    <!-- First-line and first-letter -->
+    <hr class="border-b-1 border-red-950 mt-10">
+    <div >
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter"> akhir First-line and first-letter(first-line: and first-letter:) </h1>
+        <div class="text-center w-1/2 block m-auto">
+            <p class="first-line:uppercase  first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left text-justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis officia accusantium laboriosam veritatis sint voluptates enim ipsa possimus, quos voluptate dolorum eum tenetur eveniet magnam ullam alias nemo modi ab accusamus laborum? Tempore recusandae eveniet, modi quia, fugit, distinctio ex odio dolor adipisci qui perferendis esse et harum reiciendis totam.
+            </p>
+        </div>
+        
+    </div>
+    <!-- akhir First-line and first-letter -->
+
+
+
+    <!-- dark mode  -->
+    <hr class="border-b-1 border-red-950 mt-10">
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Dark mode </h1>
+
+        <div class="m-auto w-1/2 border border-slate-300 shadow-md mt-20 px-8 py-7 rounded-xl hover:bg-sky-600 group cursor-pointer dark:hover:bg-sky-500 dark:hover:border-red-500">
+            <p class="text-sm text-justify text-slate-600 group-hover:text-white selection:bg-yellow-200 selection:text-slate-900 dark:group-hover:text-slate-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quia maiores rerum mollitia itaque molestias repellendus inventore laudantium explicabo, quis at harum omnis labore consequuntur delectus ipsam officia id minus nobis autem repellat iusto minima vitae doloribus. Nihil minus error, modi suscipit adipisci architecto, ipsa vel voluptatibus sint magni corrupti!</p>
+        </div>
+
+        <div class=" text-center flex justify-center items-center mt-10">
+            <span class="mr-6 text-slate-500">Light</span>
+            <input type="checkbox" name="" id="toggle" class="hidden">
+            <label for="toggle">
+                <div class="rounded-full w-12 h-4 bg-sky-900  flex items-center px-1  hover:cursor-pointer">
+                    <div class="toggle-circle w-3 h-3 rounded-full bg-slate-200 transition duration-300 ease-linear"></div>
+                </div>
+            </label>            
+            <span class="ml-6 text-slate-500">Dark</span>
+        </div>
+        
+    </div>
+    <!-- akhir dark mode  -->
+
+
+    <div class="mb-20"></div>
+    <script>
+        let html = document.querySelector("html") ;
+        let toggle = document.querySelector("#toggle") ; 
+
+        toggle.addEventListener('click' , function () {
+            toggle.checked ? html.classList.toggle("dark") : html.classList.toggle("dark") ;
+            
+        })
+    </script>
+</body>
+</html>

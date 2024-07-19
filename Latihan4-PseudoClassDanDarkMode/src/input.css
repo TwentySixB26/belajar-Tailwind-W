@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-7;
+    @apply  bg-slate-900 ; 
+    
+} 
+
+#toggle:checked ~ label div{
+    @apply bg-slate-200 ;
+} 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css"> 
+</head>
+<body>
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Grid Template Columns</h1>
+        <div class="grid grid-cols-4 gap-4">
+            <div class="bg-sky-200">01</div>
+            <div class="bg-sky-200">02</div>
+            <div class="bg-sky-200">03</div>
+            <div class="bg-sky-200">04</div>
+            <div class="bg-sky-200">05</div>
+            <div class="bg-sky-200">06</div>
+            <div class="bg-sky-200">07</div>
+            <div class="bg-sky-200">08</div>
+            <div class="bg-sky-200">09</div>
+        </div>
+
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">grid-cols-subgrid</h1>
+        <div class="grid grid-cols-4 gap-4">
+            <div class="bg-sky-200">01</div>
+            <div class="bg-sky-200">02</div>
+            <div class="bg-sky-200">03</div>
+            <div class="bg-sky-200">04</div>
+            <div class="bg-sky-200 grid grid-cols-subgrid gap-4 col-span-4"> 
+                <!-- (grid-cols-subgrid) digunakan untuk mengabungakan beberapa colom -->
+                <!-- (col-span-4) digunakan untuk menyeleksi berapa banyak col yg ingin diseleksi   -->
+                <!-- (col-start-3) digunakan untuk mulai dari mana grid ini  -->
+                <!-- jadi intinya adalah,tolong gabungkan grid (grid-cols-subgrid) ke kanan sebanyak 4 colom (col-span-4) dan grid yang dimulai dari grid ke 3 atau colom ke 3 (col-start-3) -->
+                <div class="col-start-3">05</div>
+            </div>
+            <div class="bg-sky-200">06</div>
+        </div>
+
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Spanning columns</h1>
+        <!-- digunakan untuk mengabungkan beberapa collom -->
+        <div class="grid grid-cols-3 gap-4 text-white text-center">
+            <div class="bg-sky-500">01</div>
+            <div class="bg-sky-500">02</div>
+            <div class="bg-sky-500">03</div>
+            <div class="col-span-2 bg-sky-500">04</div>
+            <div class="bg-sky-500">05</div>
+            <div class="bg-sky-500 ">06</div>
+            <div class="col-span-2 bg-sky-500">07</div>
+        </div>
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 mt-32 font-inter">Starting and ending lines</h1>
+        <div class="grid grid-cols-6 gap-4">
+            <div class="col-start-2 col-span-4 bg-red-300">01</div>
+            <div class="col-start-1 col-end-3 bg-red-300">02</div>
+            <div class="col-end-7 col-span-2 bg-red-300">03</div>
+            <div class="col-start-1 col-end-7 bg-red-300">04</div>
+        </div>
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 mt-32 font-inter">grid-rows</h1>
+        <div class="grid grid-rows-4 grid-flow-col gap-4">
+            <div class="bg-lime-300">01</div>
+            <div class="bg-lime-300">02</div>
+            <div class="bg-lime-300">03</div>
+            <div class="bg-lime-300">04</div>
+            <div class="bg-lime-300">05</div>
+            <div class="bg-lime-300">06</div>
+            <div class="bg-lime-300">07</div>
+            <div class="bg-lime-300">08</div>
+            <div class="bg-lime-300">09</div>
+        </div>
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 mt-32 font-inter">grid-rows-subgrid</h1>
+        <div class="grid grid-rows-4 grid-flow-col gap-4">
+            <div class="bg-yellow-300">01</div>
+            <div class="bg-yellow-300">02</div>
+            <div class="bg-yellow-300">03</div>
+            <div class="bg-yellow-300">04</div>
+            <div class="bg-yellow-300">05</div>
+            <div class="bg-yellow-300 grid grid-rows-subgrid gap-4 row-span-4">
+                <div class="row-start-1">06</div>
+            </div>
+            <div class="bg-yellow-300">07</div>
+            <div class="bg-yellow-300">08</div>
+            <div class="bg-yellow-300">09</div>
+            <div class="bg-yellow-300">10</div>
+        </div>
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 mt-32 font-inter">row-span</h1>
+        <div class="grid grid-rows-3 grid-flow-col gap-4">
+            <div class="row-span-3 bg-pink-600">01</div>
+            <div class="col-span-2 bg-pink-300">02</div>
+            <div class="row-span-2 col-span-2 bg-pink-600">03</div>
+        </div>
+
+
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 mt-32 font-inter">row-start and row-end</h1>
+        <div class="grid grid-rows-3 gap-4">
+            <div class="row-start-2 bg-slate-600">01</div>
+            <div class="row-end-3 row-span-2 bg-slate-600">02</div>
+            <div class="row-start-1 row-end-4 bg-slate-600">03</div>
+        </div>
+        
+
+        
+
+        <div class="mb-20"></div>
+    </div>
+
+    <h1 class="text-center text-4xl text-sky-600 font-bold my-10 mt-32 font-inter">Galery Grid</h1>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 px-2">
+            <div class="h-14  lg:h-full flex justify-center items-end text-center col-start-2 row-start-2">
+                <span class="font-bold sm:text-2xl lg:text-4xl">Ayo belajar Tailwind</span>
+            </div>
+            <div class="h-14 lg:h-full col-start-4 row-start-2 flex justify-center items-end ">
+                <span class="font-bold sm:text-2xl lg:text-4xl ">TwentySix</span>
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400">
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('1.jpg');"></div>    
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden bg-sky-400 col-start-3">
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('aikata.jpg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('eureka.jpeg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('green\ flash.jpeg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('Heavy_Rotation_Kuning.jpg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400 col-start-2 "> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('hisatsu.jpeg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400 col-start-4"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('JKT48_Sayonara_Crawl_Cover.jpg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('kebun\ bintang.jpg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400 col-start-3"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('pesawat\ kertas.jpg');"></div>    
+            </div>
+            <div class=" aspect-[4/3] rounded-lg overflow-hidden bg-sky-400 col-start-3 row-start-5"> 
+                <div class="w-full h-full bg-cover bg-right" style="background-image: url('seventeen.jpeg');"></div>    
+            </div>
+        </div>
+    </body>
+</html>

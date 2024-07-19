@@ -1,0 +1,178 @@
+UTILITIES 2 (effect,border,background)
+
+1. Background Attachment
+'bg-fixed' 
+<div class="bg-fixed ..." style="background-image: url(...)"></div>
+
+'bg-local'
+<div class="bg-local ..." style="background-image: url(...)"></div>
+
+'bg-scroll'
+<div class="bg-scroll ..." style="background-image: url(...)"></div>
+
+
+
+2. background posisition 
+bg-bottom		background-position: bottom;
+bg-center		background-position: center;
+bg-left			background-position: left;
+bg-left-bottom		background-position: left bottom;
+bg-left-top		background-position: left top;
+bg-right		background-position: right;
+bg-right-bottom		background-position: right bottom;
+bg-right-top		background-position: right top;
+bg-top			background-position: top;
+
+contoh : 
+<div class="bg-no-repeat bg-left-top ..." style="background-image: url(...);"></div>
+
+
+
+3. background repeat 
+bg-repeat		background-repeat: repeat;
+bg-no-repeat		background-repeat: no-repeat;
+bg-repeat-x		background-repeat: repeat-x;
+bg-repeat-y		background-repeat: repeat-y;
+bg-repeat-round		background-repeat: round;
+bg-repeat-space		background-repeat: space;
+
+contoh : 
+<div class="bg-repeat ..." style="background-image: url(...)"></div>
+
+
+
+4. background size 
+bg-auto		background-size: auto;
+bg-cover	background-size: cover;
+bg-contain	background-size: contain;
+
+<div class="bg-cover bg-center ..." style="background-image: url(...)"></div>
+
+
+
+
+5. border radius 
+rounded-none		border-radius: 0px;
+rounded-sm		border-radius: 0.125rem; /* 2px */
+rounded			border-radius: 0.25rem; /* 4px */
+rounded-md		border-radius: 0.375rem; /* 6px */
+rounded-lg		border-radius: 0.5rem; /* 8px */
+rounded-xl		border-radius: 0.75rem; /* 12px */
+Dan lain lain 
+
+contoh penerapan :
+<div class="rounded ..."></div>
+<div class="rounded-md ..."></div>
+<div class="rounded-lg ..."></div>
+<div class="rounded-full ..."></div>
+
+<button class="rounded-full ...">Save Changes</button>
+
+<div class="rounded-t-lg ..."></div>
+<div class="rounded-r-lg ..."></div>
+<div class="rounded-b-lg ..."></div>
+<div class="rounded-l-lg ..."></div>
+
+<div class="rounded-tl-lg ..."></div>
+<div class="rounded-tr-lg ..."></div>
+<div class="rounded-br-lg ..."></div>
+<div class="rounded-bl-lg ..."></div>
+
+<div dir="ltr">
+  <div class="rounded-s-lg ..."></div>
+<div>
+
+<div dir="rtl">
+  <div class="rounded-s-lg ..."></div>
+<div>
+
+
+
+6. Divide Width
+divide-x-0  	border-right-width: 0px;
+		border-left-width: 0px;
+
+divide-x-2 	border-right-width: 0px;
+		border-left-width: 2px;
+
+DLL 
+contoh penerapan : 
+
+<div class="grid grid-cols-3 divide-x">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>
+
+<div class="grid grid-cols-1 divide-y">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>
+
+
+
+7. outline width 
+outline-0	outline-width: 0px;
+outline-1	outline-width: 1px;
+outline-2	outline-width: 2px;
+
+contoh : 
+<button class="outline outline-offset-2 outline-1 ...">Button A</button>
+
+
+
+8.outline color 
+outline-inherit		outline-color: inherit;
+outline-current		outline-color: currentColor;
+outline-transparent	outline-color: transparent;
+outline-black		outline-color: #000;
+outline-white		outline-color: #fff;
+
+
+
+9.outline offset (jarak)
+outline-offset-0	outline-offset: 0px;
+outline-offset-1	outline-offset: 1px;
+outline-offset-2	outline-offset: 2px;
+
+contoh : 
+<button class="outline outline-offset-0 ...">Button A</button>
+<button class="outline outline-offset-2 ...">Button B</button>
+<button class="outline outline-offset-4 ...">Button C</button>
+
+
+
+10. box shadow 
+shadow-sm		box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+shadow			box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+shadow-md		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+shadow-lg		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+shadow-xl		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+shadow-2xl		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+shadow-inner		box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+shadow-none		box-shadow: 0 0 #0000;
+
+
+
+11. box shadow color 
+shadow-inherit		--tw-shadow-color: inherit;
+shadow-current		--tw-shadow-color: currentColor;
+shadow-transparent	--tw-shadow-color: transparent;
+shadow-black		--tw-shadow-color: #000;
+shadow-white		--tw-shadow-color: #fff;
+shadow-slate-50		--tw-shadow-color: #f8fafc;
+
+
+
+12. opacity 
+opacity-0	opacity: 0;
+opacity-5	opacity: 0.05;
+opacity-10	opacity: 0.1;
+opacity-15	opacity: 0.15;
+opacity-20	opacity: 0.2;
+
+
+
+
+

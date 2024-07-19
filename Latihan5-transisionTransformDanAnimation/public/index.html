@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css"> 
+</head>
+<body>
+
+    <!-- transform  -->
+    <div class="">
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Scale, rotate , translate , skew dan transform origin</h1>
+        <div class="w-40 h-40 bg-purple-400 mx-auto group">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center group-hover:scale-75 group-hover:transition ease-linear duration-300"> ini scale</div>
+        </div>
+
+        <div class="w-40 h-40 bg-purple-400 mx-auto group mt-10 ">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center group-hover:rotate-45 transition ease-linear duration-300"> ini rotate</div>
+        </div>
+
+        <div class="w-40 h-40 bg-purple-400 mx-auto group mt-10 ">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center group-hover:translate-x-10 transition ease-linear duration-300"> ini translate</div>
+        </div>
+
+        <div class="w-40 h-40 bg-purple-400 mx-auto group mt-10 ">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center group-hover:skew-y-12 transition ease-linear duration-300"> ini skew</div>
+        </div>
+
+
+        <div class="w-40 h-40 bg-purple-400 mx-auto group mt-10 ">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center group-hover:rotate-180 origin-bottom-right	transition ease-linear duration-300"> transform origin</div>
+        </div>
+    </div>
+    <!-- akhir transform  -->
+
+
+    <!-- transition  -->
+    <hr class="border-b-1 border-red-950 mt-10">
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">transition</h1>
+        <div class="w-40 h-40 bg-purple-400 mx-auto group mt-10 ">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center group-hover:rotate-45 group-hover:bg-slate-500 transition ease-linear duration-300 delay-1000"> transition ini delay 1second</div>
+        </div>
+    </div>
+    <!-- akhir transition  -->
+
+
+    <hr class="border-b-1 border-red-950 mt-10">
+    <div>
+        <h1 class="text-center text-4xl text-sky-600 font-bold my-10 font-inter">Animation</h1>
+        <div class="w-80 mx-auto">
+            <p>ini animasi ping</p>
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+        </div>
+
+
+
+        <div class="mt-10 w-80 mx-auto">
+            <div class="flex justify-center items-center w-20 h-20 text-xs bg-slate-900 animate-bounce text-white rounded-full">ini bounce</div>
+        </div>
+
+
+
+        <div class="w-40 h-40 mx-auto  mt-10 ">
+            <div class="w-full h-full bg-slate-900 text-center text-white flex justify-center items-center animate-spin transition ease-linear duration-300 delay-1000"> Spin </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="mb-20"></div>
+
+</body>
+</html>

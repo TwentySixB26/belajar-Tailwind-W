@@ -1,0 +1,61 @@
+Pseudo Class & Dark Mode
+
+1. hover,active , focus (hover:apa yang dikerjakan) contoh : 
+<button class="bg-sky-500 hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300">
+  Save changes
+</button>
+
+
+
+2. Form states 
+required 
+invalid	(invalid:border-pink-500	 invalid:text-pink-600)
+	(focus:invalid:border-pink-500 	focus:invalid:ring-pink-500) 
+disabled ( disabled:bg-slate-50 	disabled:text-slate-500 	disabled:border-slate-200 	disabled:shadow-none)
+
+
+
+
+3.Styling based on parent state (group-{modifier})
+class nya adalah "group" ini digunakan untuk parent
+contoh :
+<a href="#" class="	group 		block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
+  <div class="flex items-center space-x-3">
+    <svg class="h-6 w-6 stroke-sky-500 		group-hover:stroke-white" 		fill="none" viewBox="0 0 24 24"><!-- ... --></svg>
+    <h3 class="text-slate-900		 group-hover:text-white		 text-sm font-semibold">New project</h3>
+  </div>
+  <p class="text-slate-500 		group-hover:text-white 		text-sm">Create a new project from a variety of starting templates.</p>
+</a> 
+	
+
+
+
+
+4.Highlighted text (selection:tindakan apa)
+contoh code :
+<p class="selection:bg-lime-500 selection:text-slate-900"> hallo gess </p>
+
+
+
+
+5. peer
+digunakan untuk sibling 
+"peer" 
+contoh pengunaan : 
+
+<form>
+  <label class="block">
+    <span class="block text-sm font-medium text-slate-700">Email</span>
+    <input type="email" class="		peer 	"/>
+    <p class="mt-2 invisible 	peer-invalid:visible 	text-pink-600 text-sm">
+      Please provide a valid email address.
+    </p>
+  </label>
+</form>
+
+
+
+
+6. dark mode 
+berikan code "darkMode : 'class' " pada tailwind.config.js 
+berikan clas dark pada <html> dan manipulasi lah codenya disitu 

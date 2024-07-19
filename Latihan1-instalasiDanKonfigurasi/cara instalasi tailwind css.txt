@@ -1,0 +1,56 @@
+cara instal tailwindCSS 
+
+CATATAN ! : jika ingin membuat tailwind jalankan ekstensi PostCSS Language Support pada visual studio code 
+
+1. buka terminal dan ketik : 
+npm init -y 
+
+
+2. install :
+npm install -D tailwindcss postcss autoprefixer 
+
+
+3. install : 
+npx tailwindcss init
+
+
+4. buat folder src dan public 
+-public berisikan tentang html dan hal-hal lain seperti output.css 
+-src berisikan file seperti input.css 
+
+
+5. buka file tailwind.config.js dan tulis :
+content: ["./public/**/*.{html,js}"],
+sesuai dimana letak file atau folder yang akan disimpan (optional,tergantung dimana letak tempatnya)
+
+
+6. buat folder src dan buat file didalam folder tersebut dengan nama "input.css" (bebas boleh apa saja) dan masukan code ini didalamnya : 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+7. ketik ini pada terminal untuk menjalankan :
+npx tailwindcss -i ./src/input.css -o ./public/output.css --watch
+(harap disesuaikan letaknya dimana seperti pada poin 4 dan cari tempat untuk meletak output.css)
+
+
+8. pada file html yang  berada di folder public akan kita buat masukan link css (output.css) nya seperti pada 
+berikut agar tailwind dapat berfungsi :
+<link rel="stylesheet" href="output.css"> 
+(sesuaikan dimana tempat penyimpanan nya)
+
+
+9. sukses
+
+
+10. ketika di close foldernya maka diharuskan mengetik code tersebut di terminal:
+npx tailwindcss -i ./src/input.css -o ./public/output.css --watch
+
+
+11. tapi jika tidak ingin terlalu panjang maka buka file package.json dan hapus bagian "test" :  "echo\......." yang ada dibagian  "scripts" :{}
+dan diganti dengan :
+"dev" : "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch" 
+
+agar ketika masuk ke visual studio anda hanya menulis code ini pada terminal yaitu code : 
+npm run dev 

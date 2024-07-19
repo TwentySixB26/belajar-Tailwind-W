@@ -1,0 +1,101 @@
+1. @tailwind base;
+yaitu style style utama yang menjadi dasar utama dari tailwindnya 
+
+contohnya reset,ukuran dasar html dll 
+
+jika kita membuat h1,h2 dan h3 tanpa mengunakan tailwind maka akan terlihat berbeda ukuran nya,tapi jika mengunakan tailwind maka akan sama
+itu dikarenakan @tailwind base. itu yang menyebab kan ketika menulis h1 mengunakan tailwind dan tanpa mengunakan tailwind akan berbeda hasilnya 
+
+
+
+2. @tailwind components; 
+tailwind akan menambahkan class class component kalo ada atau class class component yang didaftarkan  
+
+
+
+3. @tailwind utilities;
+tailwind akan memasukan class class utilities yang kita gunakan
+
+
+
+
+4. @tailwind variants ; 
+mengunakan code variant seperti hover, focus , active ,responsive 
+
+
+
+5. @layer 
+digunakan ketika kita mau memodifikasi isi dari ketiga dasar directif ini (no 1, 2 ,3 )
+misal default dari h1 yang di sugukan tailwind adalah ukuran nya adalah small dan kita ingin merubah agar ukuranya menjadi 2xl atau seperti contoh ini 
+
+
+contoh : 
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+}
+
+
+
+
+6. @apply
+digunakan untuk melakukan penyimpanan utilities utilities class yg sudah ada di tailwind untuk dimasukan ke custom css kita secara inline
+
+contohnya : 
+kita ingin membuat button tapi warna nya mengambil mengunakan yg sudah disediakan oleh tailwind yaitu bg-red-200 
+
+.select2-dropdown {
+  @apply rounded-b-lg shadow-md;
+}
+.select2-search {
+  @apply border border-gray-300 rounded;
+}
+.select2-results__group {
+  @apply text-lg font-bold text-gray-900;
+}
+
+
+
+
+
+7. screen() 
+digunakan ketika ingin membuat media query sendiri 
+kita bisa memasukan fungsi tailwind nya langsung tanpa menentukan berapa px
+
+ @media screen(sm) {
+  /* ... */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
