@@ -54,3 +54,7 @@ dan diganti dengan :
 
 agar ketika masuk ke visual studio anda hanya menulis code ini pada terminal yaitu code : 
 npm run dev 
+
+
+12. instal pretier (agar dirapihkan secara otomatis)
+npm i -D prettier prettier-plugin-tailwindcss 

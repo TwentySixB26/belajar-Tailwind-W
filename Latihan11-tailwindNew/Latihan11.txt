@@ -1,0 +1,82 @@
+1. cara menambahkan opacity diobject 
+.kotak {
+    @apply w-[100px] h-[100px] m-10 ; 
+    background-color : theme(colors.hijau / 40%) ;  	//ini mirip seperti rgba
+}
+
+
+2. trik 2 
+//
+ theme: {
+    extend: {
+      colors:{
+        hijau :'#BADA55', 
+        tema : 'rgb(var(--warna-tema)/ <alpha-value> )'
+      }
+    },
+  }
+//
+
+
+simpan code ini di file input.css 
+:root {
+	--unggu : 168 85 247 ;
+	--pink : 236 72 153 ;
+	--biru : 2 132 199  ;
+	--orange : 249 155 22 ;
+	
+	--warna-tema: var(--pink) ; 
+}
+
+di file css 
+<h1 class="text-tema/100 bg-tema/75">trik dua </h1>
+
+
+
+3. border spacing 
+
+border-separate border-spacing-2
+
+code penerapan 
+<table class="w-full border-separate border-spacing-2">
+        <thead class="bg-slate-100 ">
+            <tr> 
+                <th class="w-1/2 border border-slate-600 font-semibold p-4 text-slate-900 ">
+                    provinsi 
+                </th>
+                <th class="w-1/2 border border-slate-600 font-semibold p-4 text-slate-900 ">
+                    provinsi 
+                </th>
+            </tr>
+        </thead>
+        <tbody class="bg-white ">
+            <tr class="text-center">
+                <td class="border border-slate-600 p-4 text-slate-700 "> Jawa barat</td>
+                <td class="border border-slate-600 p-4 text-slate-700 "> Bandung</td>
+            </tr>
+            <tr class="text-center">
+                <td class="border border-slate-600 p-4 text-slate-500 "> Jawa tengah</td>
+                <td class="border border-slate-600 p-4 text-slate-500 "> semarang</td>
+            </tr>
+        </tbody>
+ </table>
+
+
+
+
+4. arbitrari variant 
+[&>*] 
+[&>li:nth-child(3)]
+[&>li:nth-child(odd)]
+[&>li:nth-child(3)>div>span:nth-child(2)]
+
+
+contoh penerapan 
+ <ul class="w-2/3 m-auto mb-[500px] [&>li:nth-child(odd)]:bg-pink-300">
+        <li class="bg-teal-300 rounded-lg py-3 px-6 mb-2 text-base text-teal-700 text-center"> item 1 </li>
+        <li class="bg-teal-300 rounded-lg py-3 px-6 mb-2 text-base text-teal-700 text-center"> item 2 </li>
+        <li class="bg-teal-300 rounded-lg py-3 px-6 mb-2 text-base text-teal-700 text-center"> item 3 </li>
+        <li class="bg-teal-300 rounded-lg py-3 px-6 mb-2 text-base text-teal-700 text-center"> item 4 </li>
+        <li class="bg-teal-300 rounded-lg py-3 px-6 mb-2 text-base text-teal-700 text-center"> item 5 </li>
+        <li class="bg-teal-300 rounded-lg py-3 px-6 mb-2 text-base text-teal-700 text-center"> item 6 </li>
+ </ul>
